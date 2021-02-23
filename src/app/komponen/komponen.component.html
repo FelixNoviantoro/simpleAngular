@@ -1,0 +1,48 @@
+<form action="" [formGroup]="komponenForm">
+    
+    <div style="text-align: left;">
+        
+        <label style="text-align: left; margin-top: 2em;">komponen ID : </label>
+        <input type="text" class="form-control me-1" formControlName="id">
+        <span *ngIf="!komponenForm.get('id')?.valid && 
+        komponenForm.get('id')?.touched" class="text-danger"> tidak dapat dikosongkan </span>
+    </div>
+ 
+    <div style="text-align: left;">
+        
+        <label style="text-align: left; margin-top: 2em;">komponen Nama : </label>
+        <input type="text" class="form-control me-1" formControlName="nama">
+        <span *ngIf="!komponenForm.get('nama')?.valid && 
+        komponenForm.get('nama')?.touched" class="text-danger"> tidak dapat dikosongkan </span>
+    </div>
+
+    <div style="text-align: left;">
+        
+        <label style="text-align: left; margin-top: 2em;">komponen pilih :</label>
+        <select name="pilih" id="" formControlName="pilih">
+            <option value="satu">satu</option>
+            <option value="dua">dua</option>
+        </select>
+    </div>
+    
+    <button type="submit" (click)="simpan()" class="btn btn-secondary" style="margin-top: 1em;"> entry </button>
+</form>
+
+<!-- <table class="table table-hover" *ngFor="let item of items">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">nama</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td >0</td>
+            <td >{{item}}</td>
+            <td >{{item}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+
